@@ -1,0 +1,25 @@
+{
+  "name": "meta-props",
+  "version": "0.0.0",
+  "description": "Page configuration via meta tags.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9digital/meta-props.git"
+  },
+  "keywords": [
+    "config",
+    "props",
+    "property",
+    "meta"
+  ],
+  "author": "9Digital <opensource@nine.com.au>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/9digital/meta-props/issues"
+  },
+  "homepage": "https://github.com/9digital/meta-props#readme"
+}
