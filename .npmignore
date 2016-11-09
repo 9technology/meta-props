@@ -3,6 +3,8 @@
 .eslintrc
 .gitignore
 .nyc_output
+.travis.yml
+yarn.lock
 gulpfile.babel.js
 coverage
 test
