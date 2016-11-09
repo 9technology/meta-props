@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "indent": ["error", 4, {
+      "SwitchCase": 1
+    }]
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  }
+}

@@ -4,11 +4,12 @@
   "description": "Page configuration via meta tags.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test nyc --reporter=text --reporter=lcov ava",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/9digital/meta-props.git"
+    "url": "git+https://github.com/9technology/meta-props.git"
   },
   "keywords": [
     "config",
@@ -16,10 +17,49 @@
     "property",
     "meta"
   ],
-  "author": "9Digital <opensource@nine.com.au>",
+  "author": "9Technology <opensource@nine.com.au>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/9digital/meta-props/issues"
+    "url": "https://github.com/9technology/meta-props/issues"
   },
-  "homepage": "https://github.com/9digital/meta-props#readme"
+  "homepage": "https://github.com/9technology/meta-props#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-plugin-istanbul": "^2.0.3",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "coveralls": "^2.11.14",
+    "cross-env": "^3.1.3",
+    "del": "^2.2.2",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.5.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "jsdom": "^9.8.3",
+    "nyc": "^8.4.0",
+    "proxyquire": "^1.7.10",
+    "run-sequence": "^1.2.2",
+    "sinon": "^1.17.6"
+  },
+  "dependencies": {
+    "camelcase": "^3.0.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit",
+    "files": [
+      "test/**/*.spec.js"
+    ]
+  },
+  "nyc": {
+    "all": true,
+    "sourceMap": false,
+    "instrument": false
+  }
 }
