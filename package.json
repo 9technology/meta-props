@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc --reporter=text --reporter=lcov ava",
+    "prepublish": "npm run build",
     "build": "gulp"
   },
   "repository": {
