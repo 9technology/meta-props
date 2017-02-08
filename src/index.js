@@ -11,6 +11,12 @@ export default (query = null, splitter = ':') => {
 
         const tag = meta.item(i);
         const name = tag.getAttribute('name');
+
+        // check for meta tag name
+        if (name === null) {
+            continue;
+        }
+
         const type = tag.getAttribute('type');
         const key = (query) ? name.substring(query.length) : name;
         const value = cast(tag.getAttribute('content'), type);

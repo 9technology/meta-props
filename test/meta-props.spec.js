@@ -121,3 +121,12 @@ test('returns singular value as a getter for arrays', (t) => {
     `;
     t.deepEqual(metaProps('foo'), ['0', '1', '2']);
 });
+
+test('does not throw error with unnamed meta tags', (t) => {
+    document.head.innerHTML = `
+        <meta charset="utf-8">
+        <meta name="name" content="foo">
+    `;
+    const props = metaProps();
+    t.is(props.name, 'foo');
+});
